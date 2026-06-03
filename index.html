@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bautizo de Amelia Isabella</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Pantalla de bienvenida con sobre -->
+  <section id="intro">
+    <div class="envelope">
+      <img src="img/sobre_3.png" alt="Sobre de invitación" />
+      <button onclick="openInvitation()" aria-label="Abrir invitación">Abrir</button>
+    </div>
+  </section>
+
+  <!-- Contenido principal oculto inicialmente -->
+  <div id="mainContent" class="hidden">
+
+    <!-- Portada -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="cross">✝</div>
+        <h2>Mi Bautizo</h2>
+        <h1>Amelia Isabella</h1>
+        <p>Veliz Martínez</p>
+        <h2 class="fecha-portada">Sábado 27 de junio de 2026</h2>
+
+        <div class="music-button-wrapper">
+          <button id="musicToggle" onclick="toggleMusic()">🔇</button>
+        </div>
+
+        <div class="scroll-down">
+          <img src="icons/flecha_suave.svg" alt="Desliza" />
+          <p>DESLIZA</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mensaje emotivo -->
+    <section class="mensaje fade-in-section">
+      <p>Con mucha alegría y gratitud a Dios, queremos compartir contigo este momento tan especial en el que Amelia Isabella recibirá el sacramento del Bautismo.</p>
+      <div class="corazon">🤍</div>
+    </section>
+
+    <!-- Padres y padrinos -->
+    <section class="familia fade-in-section">
+      <div class="contenido-familia">
+        <p class="frase-inicio">Con la bendición de Dios<br>y el amor de su familia</p>
+        <h3>Sus padres</h3>
+        <p class="nombres">Pedro Felipe Veliz Cruz<br>Ana Paola Martínez Sánchez</p>
+        <h3>Padrinos</h3>
+        <p class="nombres">Carlos Arturo Cruz Tobias<br>Glenda Celeste Lima Mencos</p>
+        <p class="frase-final">Tienen el agrado de invitarle a la misa de acción de gracias por el sacramento del Bautismo.</p>
+      </div>
+    </section>
+
+    <!-- Detalles del evento -->
+    <section class="header fade-in-section">
+      <p>Te compartimos los detalles de esta celebración tan especial</p>
+      <div class="decoracion-evento">✝</div>
+    </section>
+
+    <!-- Línea de tiempo -->
+    <section class="timeline">
+      <div class="timeline-item fade-in-section">
+        <div class="icon-wrapper">
+          <div class="icon-circle">
+            <img src="icons/iglesia.svg" alt="Ceremonia religiosa">
+          </div>
+          <div class="line-connector"></div>
+        </div>
+        <div class="text-content">
+          <h3>Ceremonia religiosa</h3>
+          <p>Iglesia de la Escuela de Cristo, Antigua Guatemala<br>10:00 a. m.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-section">
+        <div class="icon-wrapper">
+          <div class="icon-circle">
+            <img src="icons/recepcion.svg" alt="Recepción">
+          </div>
+          <div class="line-connector"></div>
+        </div>
+        <div class="text-content">
+          <h3>Recepción</h3>
+          <p>Almuerzo en agradecimiento<br>3ra calle 4-69 zona 6, Ciudad Vieja, Sacatepéquez</p>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in-section">
+        <div class="icon-wrapper">
+          <div class="icon-circle">
+            <img src="icons/vestimenta.svg" alt="Vestimenta">
+          </div>
+          <div class="line-connector"></div>
+        </div>
+        <div class="text-content">
+          <h3>Vestimenta</h3>
+          <p>Formal, colores claros o tonos suaves</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cuenta regresiva -->
+    <section class="countdown-hero fade-in-section">
+      <div class="overlay">
+        <h2>Faltan</h2>
+        <div class="contador" id="timer">
+          <div><span id="days">0</span><small>DÍAS</small></div>
+          <div><span id="hours">0</span><small>HRS</small></div>
+          <div><span id="minutes">0</span><small>MIN</small></div>
+          <div><span id="seconds">0</span><small>SEG</small></div>
+        </div>
+        <p class="subtext">para mi Bautizo</p>
+      </div>
+    </section>
+
+    <!-- Ceremonia destacada -->
+    <section class="recepcion fade-in-section">
+      <img src="img/iglesia_escuela_cristo.jpg" alt="Iglesia de la Escuela de Cristo" class="img-recepcion" />
+      <div class="contenido-recepcion">
+        <h2>Ceremonia religiosa</h2>
+        <p><strong>Iglesia de la Escuela de Cristo</strong><br>Antigua Guatemala</p>
+        <p>Hora: 10:00 a. m.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Iglesia%20Escuela%20de%20Cristo%20Antigua%20Guatemala" target="_blank">VER MAPA IGLESIA</a>
+      </div>
+    </section>
+
+    <!-- Recepción destacada -->
+    <section class="recepcion fade-in-section recepcion-almuerzo">
+      <div class="contenido-recepcion">
+        <h2>Recepción</h2>
+        <p><strong>Almuerzo en agradecimiento</strong><br>3ra calle 4-69 zona 6, Ciudad Vieja, Sacatepéquez</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=3ra%20calle%204-69%20zona%206%20Ciudad%20Vieja%20Sacatepequez" target="_blank">VER MAPA RECEPCIÓN</a>
+      </div>
+    </section>
+
+    <!-- Sección de regalo -->
+    <section class="regalos fade-in-section">
+      <h3 class="titulo-regalos">Agradecimiento</h3>
+      <div class="contenido-regalo">
+        <div class="icono-regalo">🤍</div>
+        <p>Tu presencia y tus oraciones son el mejor regalo para Amelia Isabella en este día tan especial.</p>
+      </div>
+    </section>
+
+    <!-- Botón de confirmación por WhatsApp -->
+    <section class="confirmacion fade-in-section">
+      <h3>Confirmar Asistencia</h3>
+      <div class="contenido-confirmacion">
+        <div class="icono-confirmar">💌</div>
+        <p>Haz clic para confirmar tu asistencia vía WhatsApp.</p>
+        <a href="https://wa.me/50233068473?text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20al%20Bautizo%20de%20Amelia%20Isabella.%20Muchas%20gracias%20por%20la%20invitaci%C3%B3n." target="_blank" class="boton-confirmar">Confirmar por WhatsApp</a>
+        <p class="nota-whatsapp">WhatsApp de confirmación: 3306-8473</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer hidden">
+    <p>Gracias por acompañarnos en este momento de fe 🤍</p>
+    <p class="firma-footer">Bautizo de Amelia Isabella Véliz Martinez 2026</p>
+  </footer>
+
+  <!-- Música -->
+  <audio id="bgMusic" src="musica.mp3" loop></audio>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
